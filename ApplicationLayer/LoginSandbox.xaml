@@ -3,9 +3,10 @@
     <x:Property Name="out_Browser" Type="OutArgument(ui:Browser)" />
     <x:Property Name="in_Email" Type="InArgument(x:String)" />
     <x:Property Name="in_Password" Type="InArgument(x:String)" />
+    <x:Property Name="in_Login_SandBox_URL" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>950,1532</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>950,1128</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -80,7 +81,7 @@
       <AssemblyReference>AutoCloseMsgBox</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginSandbox" sap:VirtualizedContainerService.HintSize="960,1367" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoginSandbox" sap:VirtualizedContainerService.HintSize="960,963" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:Browser" Name="LoginBrowser" />
       <Variable x:TypeArguments="x:String" Name="Email" />
@@ -125,7 +126,7 @@
         </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="918,519" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://sandbox-business.revolut.com/signin">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="918,519" sap2010:WorkflowViewState.IdRef="OpenBrowser_1">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -207,6 +208,11 @@
           <mca:CSharpReference x:TypeArguments="ui:Browser" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">out_Browser</mca:CSharpReference>
         </OutArgument>
       </ui:OpenBrowser.UiBrowser>
+      <ui:OpenBrowser.Url>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">in_Login_SandBox_URL</mca:CSharpValue>
+        </InArgument>
+      </ui:OpenBrowser.Url>
     </ui:OpenBrowser>
   </Sequence>
 </Activity>
