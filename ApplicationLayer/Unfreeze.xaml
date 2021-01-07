@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Unfreeze" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,801" sap2010:WorkflowViewState.IdRef="Unfreeze_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Unfreeze" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="873,801" sap2010:WorkflowViewState.IdRef="Unfreeze_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
@@ -80,10 +80,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:UiElementExists DisplayName="Element Exists 'BUTTON'" Exists="[exists]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="808cad86-d28e-4ebb-83ff-64a646030298" InformativeScreenshot="fbddcac9b376ff05d84b4428ae7ffd9e" Selector="&lt;html app='chrome.exe' title='A better way to handle your money | Revolut' /&gt;&lt;webctrl aaname='Unfreeze' tag='BUTTON' /&gt;">
-            <ui:Target.TimeoutMS>
-              <InArgument x:TypeArguments="x:Int32" />
-            </ui:Target.TimeoutMS>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="808cad86-d28e-4ebb-83ff-64a646030298" InformativeScreenshot="fbddcac9b376ff05d84b4428ae7ffd9e" Selector="&lt;html app='chrome.exe' title='A better way to handle your money | Revolut' /&gt;&lt;webctrl aaname='Unfreeze' tag='BUTTON' /&gt;" TimeoutMS="5000">
             <ui:Target.WaitForReady>
               <InArgument x:TypeArguments="ui:WaitForReady" />
             </ui:Target.WaitForReady>
@@ -96,10 +93,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:UiElementExists>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID1" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
-          <FlowDecision.Condition>
-            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="exists" />
-          </FlowDecision.Condition>
+        <FlowDecision x:Name="__ReferenceID1" Condition="[exists]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">260.5,336.5</av:Point>
@@ -148,7 +142,7 @@
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Card already unfrozen&quot;]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Card already unfrozen&quot;]" />
             </FlowStep>
           </FlowDecision.False>
         </FlowDecision>
